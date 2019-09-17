@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     memset(&server, 0, sizeof(struct sockaddr_in));
     server.sin_family = AF_INET;
     server.sin_port = htons(6677);
-    server.sin_addr.s_addr = inet_addr("116.24.65.230");
+    server.sin_addr.s_addr = inet_addr("116.24.65.230");    // server.sin_addr.s_addr = htonl(INADDR_ANY)
 
     if (connect(sockfd, (struct sockaddr*)&server, sizeof(server)) < 0) {
         perror("socket connect failed!\n");
