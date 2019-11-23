@@ -1,4 +1,4 @@
 all:
-	gcc -o comtest main.c
+	gcc -Wall -O0 -g -o comtest main.c
 clean:
 	rm -f comtest
